@@ -1,3 +1,7 @@
+This is a fork of [https://github.com/synth/omniauth-microsoft_graph](https://github.com/synth/omniauth-microsoft_graph).
+
+The only difference is this returns a user's memberships.
+
 # Omniauth::MicrosoftGraph [![Build Status](https://travis-ci.org/synth/omniauth-microsoft_graph.svg?branch=master)](https://travis-ci.org/synth/omniauth-microsoft_graph)
 
 Microsoft Graph OAuth2 Strategy for OmniAuth.
