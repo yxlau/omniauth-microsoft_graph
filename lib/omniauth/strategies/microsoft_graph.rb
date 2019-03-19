@@ -22,6 +22,7 @@ module OmniAuth
           last_name:  raw_info["surname"],
           name:       full_name,
           nickname:   raw_info["userPrincipalName"],
+          memberships: get_membership_names(memberships)
         }
       end
 
@@ -53,6 +54,10 @@ module OmniAuth
 
       def full_name
         raw_info["displayName"].presence || raw_info.values_at("givenName", "surname").compact.join(' ')
+      end
+      
+      def get_membership_names(memberships)
+        memberships['value'].map{ |m| m.displayName}
       end
 
       def build_access_token
