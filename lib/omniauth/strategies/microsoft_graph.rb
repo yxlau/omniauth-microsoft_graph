@@ -57,7 +57,7 @@ module OmniAuth
       end
       
       def get_membership_names(memberships)
-        memberships['value'].map{ |m| {name: m["displayName"], id: m["id"]}
+        memberships['value'].map{ |m| {name: m["displayName"], id: m["id"]}}
       end
 
       def build_access_token
