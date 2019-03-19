@@ -29,6 +29,7 @@ module OmniAuth
         {
           'raw_info' => raw_info,
           'params' => access_token.params
+          'memberships' => access_token.get('https://graph.microsoft.com/v1.0/me/memberOf').parsed
         }
       end
       
