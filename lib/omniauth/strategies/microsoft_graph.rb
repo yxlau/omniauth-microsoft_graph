@@ -22,7 +22,7 @@ module OmniAuth
           last_name:  raw_info["surname"],
           name:       full_name,
           nickname:   raw_info["userPrincipalName"],
-          memberships: get_membership_names(memberships)
+          memberships: get_membership_names(extra["memberships"])
         }
       end
 
